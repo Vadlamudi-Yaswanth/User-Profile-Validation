@@ -6,9 +6,9 @@ Purpose:
 The main purpose of this project is to practice input validation in Python
 How the Code Works:
 - The program takes user input from the console.
-- It validates each field using conditional statements and loops.
-- If the input is valid, it displays a success message.
-- If the input is invalid, it shows an appropriate error message.
+- It validates each field using conditional statements.
+- If the input is valid, it displays a User Profile is Valid.
+- If the input is invalid, it shows User Profile is InValid.
 Files in This Project:
 - `Day1_Challenge.py` : Contains the Python code for user profile validation.
 Output:
