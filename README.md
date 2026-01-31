@@ -23,9 +23,11 @@ Student ID
 Email ID
 Password
 Referral Code
+And checks which is checked first password or student_Id
 Each input is validated based on specific rules.
 If all validation rules are satisfied, the program displays APPROVED.
 If any rule fails, the program displays REJECTED.
 Day2_Challenge.py : Contains the Python program for validating student credentials.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4b64bbd5-08c0-424e-b2ea-6aa79f7cee21" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/988cf16c-82a1-486e-9989-44e48287cc94" />
+
 
