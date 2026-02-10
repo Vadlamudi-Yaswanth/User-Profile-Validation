@@ -29,22 +29,22 @@ print(marks)
 for mark in marks:
     if mark>=90 and mark<=100:
         count1+=1
-        print("Excellent")
+        print(f"{mark} ->Excellent")
     elif mark>=75 and mark<=89:
         count1+=1
-        print("Very Good")
+        print(f"{mark} ->Very Good")
     elif mark>=60 and mark<=74:
         count1+=1
-        print("Good")
+        print(f"{mark}->Good")
     elif mark>=40 and mark<=59:
         count1+=1
-        print("Average")
+        print(f"{mark}->Average")
     elif mark>=0 and mark<=39:
         count2+=1
-        print("Fail")
+        print(f"{mark}->Fail")
     else:
-        print("Invalid Entry")
+        print(f"{mark}->Invalid")
 print("Total no.of valid students is:",count1)
-print("Total no.of Invalid students is:",count2)
+print("Total no.of Failed students is:",count2)
 
 
