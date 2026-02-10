@@ -66,6 +66,7 @@ Files in This Project
  Output
 The program displays the performance category for each student mark and
 shows a final summary including the total number of valid and failed students.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3709088d-a8df-4943-8a98-300b464b9359" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fcc4ae08-07cf-4fa0-9578-7434b3ba268c" />
+
 
 
