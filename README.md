@@ -67,6 +67,65 @@ Files in This Project
 The program displays the performance category for each student mark and
 shows a final summary including the total number of valid and failed students.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fcc4ae08-07cf-4fa0-9578-7434b3ba268c" />
+## Cyber Activity Risk Analyzer:
+## Description
+This project analyzes student login activity scores to identify possible
+security risks. Each activity score represents the intensity of a login session.
+The program processes these scores, categorizes them into different risk levels,
+and applies a personalized security rule based on my register number.
 
+## Purpose
+The purpose of this project is to understand how basic Python concepts like
+lists, for loops, and conditional statements can be used to analyze data.
+It also demonstrates how personalization can change the behavior of a program
+for different users.
+
+## How the Program Works
+- The program takes a list of integer activity scores as input.
+- Each score is checked using a for loop.
+- If a score is negative, it is treated as invalid and ignored.
+- Valid scores are categorized into Low, Medium, High, or Critical risk.
+- Separate lists are created to store scores under each category.
+- After categorization, a personalized filter is applied based on the
+  last digit (D) of my register number.
+- The program then displays the final filtered results along with a summary.
+
+## Risk Categorization Rules
+- Less than 0 → Invalid (Ignored)
+- 0 to 30 → Low Risk
+- 31 to 60 → Medium Risk
+- 61 to 100 → High Risk
+- Above 100 → Critical Risk
+
+## Personalized Security Filter
+Let D be the last digit of my register number.
+
+- If D is even:
+  Low Risk scores are removed after categorization.
+  Only Medium, High, and Critical scores are kept.
+
+- If D is odd:
+  Critical Risk scores are removed after categorization.
+  Only Low, Medium, and High scores are kept.
+
+The value of D is printed in the output to clearly show how the
+program behavior changes based on personalization.
+
+## Additional Features
+The program also:
+- Counts the total number of valid entries
+- Counts the number of ignored (invalid) entries
+- Counts how many entries were removed due to personalization
+- Displays the final categorized lists after filtering
+
+## Output
+At the end, the program shows:
+- The value of D
+- The categorized risk lists
+- The filtered lists after personalization
+- A final security summary
+## Files in This Project
+- `Day4_Challenge.py` : Contains the Python implementation of the Cyber Activity Risk Analyzer.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c12a5be0-380e-4555-a201-7db0ca977c15" />
 
 
