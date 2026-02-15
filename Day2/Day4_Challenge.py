@@ -24,16 +24,4 @@ print("Lowe Risk:",low_risk)
 print("Medium Risk:",medium_risk)
 print("High Risk:",high_risk)
 print("Critical Risk:",critical_risk)
-print("After Personalized Filtering:")
-print("Lowe Risk:",low_risk)
-print("Medium Risk:",medium_risk)
-print("High Risk:",high_risk)
-removed_count = 0
-while len(critical_risk) > 0:
-    critical_risk.pop()
-    removed_count = removed_count + 1
-print("Critical Risk:",critical_risk)
-print("Total valid Entries:",n-ignored_count)
-print("Total Ignored Entries:",ignored_count)
-print("Removed Due to Personalization:",removed_count)
 
