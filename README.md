@@ -127,5 +127,70 @@ At the end, the program shows:
 ## Files in This Project
 - `Day4_Challenge.py` : Contains the Python implementation of the Cyber Activity Risk Analyzer.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c12a5be0-380e-4555-a201-7db0ca977c15" />
+# Emergency Resource Dispatch Analyzer
+## Description
+This project simulates an emergency command center analyzing resource
+requests during a disaster drill. Each zone submits a request value,
+and the system processes these values to identify demand levels,
+remove invalid data, and generate a final dispatch report.
+## Purpose
+The purpose of this project is to practice using lists, for loops,
+and conditional statements in Python to analyze data step by step.
+It also demonstrates how personalization (PLI) can change the final
+output of the program based on individual details.
+
+## How the Program Works
+- The program accepts a list of integer resource requests.
+- Each request is processed using a for loop.
+- Invalid and valid requests are identified.
+- Valid requests are categorized into:
+  - Low Demand
+  - Moderate Demand
+  - High Demand
+- Separate lists are created for each category.
+- A Personalized Logic Index (PLI) is calculated using the
+  length of my full name.
+- Based on the PLI value, certain categories are removed
+  from the final dispatch report.
+- The program displays final categorized lists along with
+  summary counts.
+## Base Classification Rules
+- Less than 0 → Invalid Request
+- 0 → No Demand
+- 1–20 → Low Demand
+- 21–50 → Moderate Demand
+- Above 50 → High Demand
+
+## Personalized Logic Implementation (PLI)
+Let:
+L = Length of my full name (excluding spaces)
+PLI = L % 3
+My Values:
+L = 17
+PLI =2
+Applied Rule:
+- If PLI = 0 → Rule A (Remove all Low Demand requests)
+- If PLI = 1 → Rule B (Remove all High Demand requests)
+- If PLI = 2 → Rule C (Keep only Moderate Demand requests)
+The program prints both L and PLI values to clearly show
+the applied personalization rule.
+
+## Additional Tracking
+The program also:
+- Counts total valid requests
+- Counts invalid requests
+- Counts how many requests were removed due to PLI
+- Displays final categorized lists after filtering
+
+## Output
+The program displays:
+- Length of name (L)
+- PLI value
+- Applied rule
+- Categorized demand lists
+- Final filtered lists
+- Summary of valid and removed requests
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90b086e1-48f4-4967-a0eb-84b2d759ee9d" />
+
 
 
