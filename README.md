@@ -192,5 +192,77 @@ The program displays:
 - Summary of valid and removed requests
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90b086e1-48f4-4967-a0eb-84b2d759ee9d" />
 
+Transaction Risk Analyzer
+## Description
 
+This project is designed to analyze user transaction data to identify possible risk patterns. Each transaction amount is processed and categorized based on its value. The program evaluates the transactions and determines whether the overall activity is safe or risky.
+
+## Purpose
+
+The main purpose of this project is to practice using lists, loops, conditional statements, dictionaries, and list comprehension in Python. It also helps in understanding how simple logic can be used to detect patterns and make decisions.
+
+How the Program Works
+
+The program accepts a list of transaction amounts as input.
+
+Each transaction is processed using a for loop.
+
+Based on conditions, transactions are categorized into Normal, Large, High Risk, or Invalid.
+
+A dictionary is used to store categorized transactions.
+
+List comprehension is used to calculate the total value of valid transactions.
+
+The program checks conditions like frequent transactions, large spending, and suspicious patterns.
+
+Based on these conditions, the program determines the final risk level.
+
+Transaction Classification Rules
+
+Less than or equal to 0 → Invalid
+
+1 to 500 → Normal
+
+501 to 2000 → Large
+
+Above 2000 → High Risk
+
+Pattern Detection Rules
+
+More than 5 transactions → Frequent Transactions
+
+Total value greater than 5000 → Large Spending
+
+3 or more high-risk transactions → Suspicious Pattern
+
+## Personalized Logic
+
+I modified the risk classification logic to consider multiple conditions together.
+
+If there are multiple high-risk transactions → High Risk
+
+If both frequent transactions and large spending occur → High Risk
+
+If only one condition is satisfied → Moderate Risk
+
+Otherwise → Low Risk
+
+## Output
+
+The program displays:
+
+Categorized transactions
+
+Total transaction value
+
+Number of transactions
+
+Number of high-risk transactions
+
+Final risk classification
+
+Files in This Project
+
+Day6_Challenge.py : Contains the Python implementation of the transaction analysis system
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6fb8ec4a-9ee5-45fe-ba7a-d6d5cdfd737f" />
 
