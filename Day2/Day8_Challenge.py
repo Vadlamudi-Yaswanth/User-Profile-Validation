@@ -14,3 +14,27 @@ def create_student_data(n):
 
         records.append((sid, m, att, assign, perf_score))
     return records
+
+
+def student_classification(data):
+    result = {
+        "At Risk": [],
+        "Average": [],
+        "Good": [],
+        "Top Performer": []
+    }
+    for rec in data:
+        sid, m, att, assign, pi = rec
+        if m < 40 or att < 50:
+            result["At Risk"].append(sid)
+
+        elif m > 90 and att > 80:
+            result["Top Performer"].append(sid)
+
+        elif 71 <= m <= 90:
+            result["Good"].append(sid)
+
+        else:
+            result["Average"].append(sid)
+
+    return result
