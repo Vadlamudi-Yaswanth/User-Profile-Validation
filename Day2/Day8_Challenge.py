@@ -120,3 +120,12 @@ print(correlation_value)
 
 print("\n===== FINAL SYSTEM INSIGHT =====")
 print(system_status)
+plt.figure(figsize=(6, 4))
+
+plt.hist(df["Marks"], bins=5)
+
+plt.title("Marks Distribution Histogram")
+plt.xlabel("Marks Range")
+plt.ylabel("Number of Students")
+plt.grid(True)
+plt.show()
