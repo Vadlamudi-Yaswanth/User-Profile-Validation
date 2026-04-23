@@ -38,3 +38,22 @@ def student_classification(data):
             result["Average"].append(sid)
 
     return result
+def perform_analysis(df):
+    marks_vals = df["Marks"].values
+    manual_mean = sum(marks_vals) / len(marks_vals)
+    median_marks = np.median(marks_vals)
+    std_dev_marks = np.std(marks_vals)
+    correlation = df["Marks"].corr(df["Attendance"])
+    min_marks = min(marks_vals)
+    max_marks = max(marks_vals)
+
+    normalized_marks = [
+        (x - min_marks) / (max_marks - min_marks)
+        for x in marks_vals
+    ]
+
+    df["Normalized Marks"] = normalized_marks
+
+    stats_tuple = (manual_mean, std_dev_marks, max_marks)
+
+    return stats_tuple, correlation
