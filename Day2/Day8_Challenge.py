@@ -57,3 +57,19 @@ def perform_analysis(df):
     stats_tuple = (manual_mean, std_dev_marks, max_marks)
 
     return stats_tuple, correlation
+def check_system_pattern(df, categories):
+
+    std_dev = np.std(df["Marks"])
+
+    attendance_risk = len(df[df["Attendance"] < 50])
+
+    top_performers = len(categories["Top Performer"])
+
+    if std_dev < 15 and attendance_risk <= 3 and top_performers >= 2:
+        return "Stable Academic System"
+
+    elif std_dev < 25:
+        return "Moderate Performance"
+
+    else:
+        return "Critical Attention Required"
