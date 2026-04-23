@@ -102,23 +102,23 @@ stats_tuple, correlation_value = perform_analysis(df)
 
 system_status = check_system_pattern(df, category_dictionary)
 
-print("\n===== STUDENT DATAFRAME =====\n")
+print("\n STUDENT DATAFRAME \n")
 print(df)
 
-print("\n===== STUDENT CATEGORY DICTIONARY =====\n")
+print("\n STUDENT CATEGORY DICTIONARY \n")
 print(category_dictionary)
 
-print("\n===== CATEGORY SET REPRESENTATION =====\n")
+print("\n CATEGORY SET REPRESENTATION \n")
 print(category_sets)
 
-print("\n===== STATISTICAL SUMMARY TUPLE =====")
+print("\nSTATISTICAL SUMMARY TUPLE")
 print("(Mean, Std Dev, Max Marks)")
 print(stats_tuple)
 
 print("\nCorrelation between Marks and Attendance:")
 print(correlation_value)
 
-print("\n===== FINAL SYSTEM INSIGHT =====")
+print("\n FINAL SYSTEM INSIGHT")
 print(system_status)
 plt.figure(figsize=(6, 4))
 
