@@ -73,3 +73,50 @@ def check_system_pattern(df, categories):
 
     else:
         return "Critical Attention Required"
+last_digit = int(input("Enter last digit of your roll number: "))
+
+if last_digit == 0:
+    last_digit = 10
+
+students = create_student_data(last_digit)
+
+df = pd.DataFrame(
+    students,
+    columns=[
+        "Student_ID",
+        "Marks",
+        "Attendance",
+        "Assignment",
+        "Performance_Index"
+    ]
+)
+
+category_dictionary = student_classification(students)
+
+category_sets = {
+    key: set(value)
+    for key, value in category_dictionary.items()
+}
+
+stats_tuple, correlation_value = perform_analysis(df)
+
+system_status = check_system_pattern(df, category_dictionary)
+
+print("\n===== STUDENT DATAFRAME =====\n")
+print(df)
+
+print("\n===== STUDENT CATEGORY DICTIONARY =====\n")
+print(category_dictionary)
+
+print("\n===== CATEGORY SET REPRESENTATION =====\n")
+print(category_sets)
+
+print("\n===== STATISTICAL SUMMARY TUPLE =====")
+print("(Mean, Std Dev, Max Marks)")
+print(stats_tuple)
+
+print("\nCorrelation between Marks and Attendance:")
+print(correlation_value)
+
+print("\n===== FINAL SYSTEM INSIGHT =====")
+print(system_status)
