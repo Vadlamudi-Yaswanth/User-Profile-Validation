@@ -192,7 +192,7 @@ The program displays:
 - Summary of valid and removed requests
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90b086e1-48f4-4967-a0eb-84b2d759ee9d" />
 
-Transaction Risk Analyzer
+## Transaction Risk Analyzer
 ## Description
 
 This project is designed to analyze user transaction data to identify possible risk patterns. Each transaction amount is processed and categorized based on its value. The program evaluates the transactions and determines whether the overall activity is safe or risky.
@@ -265,4 +265,159 @@ Files in This Project
 
 Day6_Challenge.py : Contains the Python implementation of the transaction analysis system
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6fb8ec4a-9ee5-45fe-ba7a-d6d5cdfd737f" />
+# 📊 Multi-Dimensional Academic Intelligence System
+
+## 📌 Overview
+
+This project is designed to analyze student performance using multiple parameters such as **marks, attendance, and assignment scores**.
+Instead of simple evaluation, the system applies **data structures, statistical analysis, and feature engineering** to generate meaningful insights.
+
+---
+
+## 🎯 Objectives
+
+* Generate student data using random values
+* Store and manage data using **lists, tuples, and dictionaries**
+* Convert raw data into a **Pandas DataFrame**
+* Perform analysis using **NumPy and math functions**
+* Classify students into different performance categories
+* Detect patterns and generate final system insights
+
+---
+
+## 🧱 Data Structure
+
+Each student record contains:
+
+* Student_ID
+* Marks (0–100)
+* Attendance (0–100)
+* Assignment Score (0–50)
+* Performance Index
+
+All records are stored in a **list of tuples**, then converted into a DataFrame.
+
+---
+
+## ⚙️ Features Implemented
+
+### 🔹 1. Data Generation
+
+* Random data generation using `random` module
+* Number of students depends on **last digit of roll number**
+
+---
+
+### 🔹 2. Student Classification
+
+Students are categorized into:
+
+* **At Risk** → Marks < 40 OR Attendance < 50
+* **Average** → Marks between 40–70
+* **Good** → Marks between 71–90
+* **Top Performer** → Marks > 90 AND Attendance > 80
+
+---
+
+### 🔹 3. Performance Index (Custom Feature)
+
+Formula used:
+
+PI = √(marks × assignment) + 2 × attendance − log(marks + 1)
+
+#### Why this works:
+
+* Combines academic performance and consistency
+* Rewards balanced scores
+* Attendance is given higher importance
+* Log reduces extreme mark dominance
+
+---
+
+### 🔹 4. Statistical Analysis
+
+Using NumPy and manual computation:
+
+* Mean (manual calculation)
+* Median
+* Standard Deviation
+* Correlation between marks and attendance
+
+Also, marks are normalized using:
+(x − min) / (max − min)
+
+---
+
+### 🔹 5. Pattern Detection
+
+System evaluates:
+
+* Consistency → Std deviation < 15
+* Attendance risk → Students with attendance < 50
+* High achievement → Number of top performers
+
+---
+
+## 🧠 Final Insights
+
+Based on analysis, system outputs one of:
+
+* **Stable Academic System**
+* **Moderate Performance**
+* **Critical Attention Required**
+
+---
+
+## 📊 Visualization
+
+A histogram is plotted using **Matplotlib** to show marks distribution.
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Math module
+
+---
+
+## ▶️ How to Run
+
+1. Install required libraries:
+   pip install numpy pandas matplotlib
+
+2. Run the program:
+   python your_file_name.py
+
+3. Enter last digit of roll number when prompted
+
+---
+
+## 📌 Sample Output
+
+* DataFrame with student data
+* Categorized dictionary
+* Statistical summary tuple
+* Correlation value
+* Final system insight
+* Histogram graph
+
+---
+
+## 📈 Learning Outcomes
+
+* Understanding of **data structures + real-world modeling**
+* Hands-on with **NumPy, Pandas, and visualization**
+* Implementation of **feature engineering concepts**
+* Experience with **multi-layer data analysis**
+
+---
+
+## 🚀 Conclusion
+
+This project demonstrates how basic programming concepts can be extended into a **data-driven intelligent system** for academic performance evaluation.
+
 
