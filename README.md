@@ -533,4 +533,100 @@ Files in This Project
 
 Day9_Challenge.py : Contains the Python implementation of the inventory mutation tracking system
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/25e955da-0891-4618-b7dc-83fa7f4a3449" />
+Academic Data Drift & Copy Behavior Analyzer
+## Description
 
+This project simulates a university system that manages student academic data and analyzes how data changes when copied and modified. It focuses on detecting data drift and understanding how shallow copy and deep copy affect nested data structures.
+
+## Purpose
+
+The main purpose of this project is to understand how copying techniques impact data integrity. It also helps in learning how to perform statistical analysis using Pandas and NumPy, and how improper copying can lead to data inconsistency in real-world systems.
+
+## How the Program Works
+
+The program generates student data using the random module and stores it in a list of dictionaries with nested structures.
+
+It creates both shallow copy and deep copy of the data.
+
+Mutations are applied only on the copied data, including modifying marks, attendance, and inner score lists.
+
+The data is converted into a Pandas DataFrame for analysis.
+
+NumPy is used to calculate mean, standard deviation, and drift.
+
+One metric (mean) is also calculated manually without using NumPy.
+
+The program compares original and modified data to detect drift and copy behavior issues.
+
+Data Structure
+
+Each student record contains:
+
+ID
+Marks
+Attendance
+Scores (internal and assignment)
+
+This ensures a nested structure for testing copy behavior.
+
+Mutation Rules
+
+Marks are increased using:
+marks = marks + √(marks)
+
+Scores list is modified
+
+Attendance is slightly reduced
+
+Only selected students are modified using personalized rule
+
+Copy Behavior Analysis
+
+Shallow Copy
+
+Creates a new outer structure
+Shares inner references
+Changes affect original data
+
+Deep Copy
+
+Creates fully independent data
+No shared references
+Changes do not affect original data
+Data Drift Detection
+
+Drift is calculated as:
+drift = |original_mean - modified_mean|
+
+This helps in identifying how much the data has changed after mutation.
+
+Personalized Logic
+
+Roll number is used to select which students to modify:
+
+index % 3 == roll_number % 3
+
+This ensures controlled and predictable mutation.
+
+## Output
+
+The program displays:
+
+Original DataFrame
+
+Shallow copy DataFrame
+
+Deep copy DataFrame
+
+Drift value
+
+Tuple → (mean, drift, standard deviation)
+
+Manual mean value
+
+Final classification (Stable / Minor Drift / Critical Drift / Copy Failure Detected)
+
+Files in This Project
+
+Day10_Challenge.py : Contains the Python implementation of the academic data drift analyzer
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a007e936-1df4-4a1d-a643-5594693262f5" />
