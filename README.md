@@ -419,5 +419,118 @@ A histogram is plotted using **Matplotlib** to show marks distribution.
 ## 🚀 Conclusion
 
 This project demonstrates how basic programming concepts can be extended into a **data-driven intelligent system** for academic performance evaluation.
+## Smart Inventory Mutation Tracker
+Description
 
+This project simulates a warehouse inventory system where each product contains nested details such as price, stock, and supplier information. The program analyzes how data behaves when copied using shallow copy and deep copy, helping to identify unintended data modifications.
+
+## Purpose
+
+The main purpose of this project is to understand how Python handles copying of complex data structures. It demonstrates the difference between shallow copy and deep copy using lists and dictionaries, and shows how improper copying can lead to data corruption in real-world systems.
+
+## How the Program Works
+
+The program creates an inventory using a list of dictionaries with nested structures.
+
+Two types of copies are created:
+
+Shallow copy
+Deep copy
+
+A function is used to apply mutations such as:
+
+Reducing price by 10%
+Modifying stock for a specific item
+
+The item to be modified is selected using a personalized rule based on roll number.
+
+The program compares original and modified data using loops and conditions.
+
+Memory reference checks (id()) are used to prove whether objects are shared or independent.
+
+Inventory Structure
+
+Each item contains:
+
+Item name
+Details (price, stock)
+Supplier information (name, rating)
+
+This creates a multi-level nested structure for proper testing.
+
+## Mutation Rules
+
+Price is reduced by 10% for selected item
+
+Stock is reduced by 5
+
+Only the item at index:
+roll_number % length_of_inventory is modified
+
+Copy Behavior Analysis
+
+Shallow Copy
+
+Creates a new outer list
+Inner dictionaries are shared
+Changes in copied data affect original data
+
+Deep Copy
+
+Creates completely independent copies
+No shared references
+Changes do not affect original data
+Output Evidence
+
+The program displays:
+
+Original inventory before modification
+
+Shallow copy and deep copy before modification
+
+Inventory after applying changes
+
+Memory IDs of nested objects
+
+Comparison results showing changed and unchanged items
+
+Tuple summary:
+(changed_items_count, unchanged_items_count)
+
+Key Observation
+
+Shallow copy failed to isolate changes because nested dictionaries were shared between original and copied data. This was verified through identical memory IDs and reflected changes in the original output.
+
+Deep copy successfully isolated changes by creating independent nested objects.
+
+Personalized Logic
+
+Roll number is used to determine which item to modify.
+
+Example:
+If roll number = 7 and inventory size = 2
+→ Index = 7 % 2 = 1
+
+Only that item is mutated.
+
+Output
+
+The program displays:
+
+Original inventory
+
+Shallow copy result
+
+Deep copy result
+
+Differences observed
+
+Tuple summary of changes
+
+Memory reference comparison
+
+Files in This Project
+
+Day9_Challenge.py : Contains the Python implementation of the inventory mutation tracking system
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/25e955da-0891-4618-b7dc-83fa7f4a3449" />
 
