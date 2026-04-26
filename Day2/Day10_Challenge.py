@@ -73,8 +73,13 @@ print("\nOriginal Data:\n", original_df)
 print("\nShallow Copy:\n", shallow_df)
 print("\nDeep Copy:\n", deep_df)
 
-print("\nDrift:", drift)
-print("Tuple:", (mean, drift, std))
+print("\nDrift:", round(float(drift), 2))
+print("Tuple:", (
+    round(float(mean), 2),
+    round(float(drift), 2),
+    round(float(std), 2)
+))
+
 
 print("\nManual Mean:", manual_mean)
 
